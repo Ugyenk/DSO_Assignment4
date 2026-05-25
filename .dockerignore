@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.github
+*.md
+test_app.py
+render.yaml
