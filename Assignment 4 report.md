@@ -1,11 +1,11 @@
-# 🚀 DSO_ASSIGNMENT4 — CI/CD Pipeline with Docker & Render
+#  DSO_ASSIGNMENT4 — CI/CD Pipeline with Docker & Render
 
 **GitHub:** [Ugyenk/DSO_ASSIGNMENT4](https://github.com/Ugyenk/DSO_ASSIGNMENT4)  
 **Docker Hub:** [aizenchan/dso_assignment4](https://hub.docker.com/r/aizenchan/dso_assignment4)
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 DSO_ASSIGNMENT4/
@@ -22,7 +22,7 @@ DSO_ASSIGNMENT4/
 
 ---
 
-## 🌐 API Endpoints
+##  API Endpoints
 
 | Method | Route            | Description            |
 |--------|------------------|------------------------|
@@ -40,27 +40,27 @@ Triggers on every **push to `main`**:
 push to main
     │
     ▼
-📥 Checkout code
+ Checkout code
     │
     ▼
-🐍 Setup Python 3.9
+ Setup Python 3.9
     │
     ▼
-📦 Install dependencies
+ Install dependencies
     │
     ▼
-🧪 Run pytest (5 tests)
+ Run pytest (5 tests)
     │
     ▼  (only if tests pass)
-🐳 Build & Push Docker image → aizenchan/dso_assignment4:latest
+ Build & Push Docker image → aizenchan/dso_assignment4:latest
     │
     ▼
-🚀 Trigger Render Deploy Hook
+ Trigger Render Deploy Hook
 ```
 
 ---
 
-## 🐳 Docker
+##  Docker
 
 ### Pull and run the image:
 ```bash
@@ -78,26 +78,17 @@ docker run -p 5000:5000 dso_assignment4
 
 ---
 
-## 🔑 GitHub Secrets Required
+##  GitHub Secrets Required
 
-Go to: **Repo → Settings → Secrets and variables → Actions → New repository secret**
 
 | Secret Name             | Value                              |
 |-------------------------|------------------------------------|
 | `DOCKERHUB_USERNAME`    | `aizenchan`                        |
-| `DOCKERHUB_TOKEN`       | Your DockerHub Access Token        |
-| `RENDER_DEPLOY_HOOK_URL`| Your Render Deploy Hook URL        |
+| `DOCKERHUB_TOKEN`       | My DockerHub Access Token        |
+| `RENDER_DEPLOY_HOOK_URL`| My Render Deploy Hook URL        |
 
-### How to get DockerHub Token:
-1. [hub.docker.com](https://hub.docker.com) → Account Settings → Security
-2. New Access Token → copy it → paste as `DOCKERHUB_TOKEN`
 
-### How to get Render Deploy Hook:
-1. Render dashboard → your service → Settings → Deploy Hook → copy URL
-
----
-
-## 🚢 Deploy on Render
+##  Deploy on Render
 
 1. [render.com](https://render.com) → **New → Web Service**
 2. Connect `Ugyenk/DSO_ASSIGNMENT4`
@@ -108,28 +99,3 @@ Go to: **Repo → Settings → Secrets and variables → Actions → New reposit
 
 ---
 
-## 🧪 Test Output
-
-```
-collected 5 items
-
-test_app.py::test_home         PASSED  ✓
-test_app.py::test_health       PASSED  ✓
-test_app.py::test_add          PASSED  ✓
-test_app.py::test_add_zero     PASSED  ✓
-test_app.py::test_basic_math   PASSED  ✓
-
-===== 5 passed in 0.11s =====
-```
-
----
-
-## 📋 Marking Criteria
-
-| Criteria | Implementation |
-|----------|---------------|
-| ✅ Project structure | All required files present |
-| ✅ CI pipeline (build + test) | GitHub Actions: install → pytest → Docker build |
-| ✅ Test implementation | 5 pytest unit tests |
-| ✅ Deployment automation | Docker push to aizenchan/dso_assignment4 + Render hook |
-| ✅ Documentation | This README |
